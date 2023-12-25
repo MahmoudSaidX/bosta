@@ -1,3 +1,5 @@
+import vector from "/public/vector.webp";
+
 const DeliverydAdress = () => {
   return (
     <div className="w-1/3 px-8">
@@ -8,7 +10,7 @@ const DeliverydAdress = () => {
         </div>
         <div className="flex flex-row justify-between items-center rounded-md bg-white border border-gray-200 p-4">
           <div>
-            <img className="w-28" src="/public/vector.webp" alt="bosta" />
+            <img className="w-28" src={vector} alt="bosta" />
           </div>
           <div className="flex flex-col gap-4">
             <h5>هل يوجد مشكلة في شحنتك؟!</h5>
