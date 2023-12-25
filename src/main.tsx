@@ -8,7 +8,7 @@ import { store } from "./helpers/store.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Provider store={store}>
         <App />
       </Provider>
