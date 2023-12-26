@@ -2,10 +2,8 @@
 import { useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import { useDispatch } from "react-redux";
-import {
-  ShipmentData,
-  setShipmentData,
-} from "../helpers/features/shipmentSlice";
+import { setShipmentData } from "../helpers/features/shipmentSlice";
+import { ShipmentData } from "../types/shipmentInterface";
 
 interface UseBostaShipmentTracking {
   fetchShipmentData: (trackingNumber: string) => Promise<void>;

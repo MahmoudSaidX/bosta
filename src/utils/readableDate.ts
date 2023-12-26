@@ -1,6 +1,7 @@
 export default function formatReadableDate(
   dateString: string,
-  options: Intl.DateTimeFormatOptions
+  options: Intl.DateTimeFormatOptions,
+  locales: "ar-EG" | "en-US"
 ): string {
   const date = new Date(dateString);
   // const options: Intl.DateTimeFormatOptions = {
@@ -12,6 +13,6 @@ export default function formatReadableDate(
   //   second: "numeric",
   // };
 
-  const formattedDate = new Intl.DateTimeFormat("ar-EG", options).format(date);
+  const formattedDate = new Intl.DateTimeFormat(locales, options).format(date);
   return formattedDate;
 }

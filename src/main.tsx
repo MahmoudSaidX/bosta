@@ -8,10 +8,8 @@ import { store } from "./helpers/store.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    {/* <Router basename="/"> */}
     <Provider store={store}>
       <App />
     </Provider>
-    {/* </Router> */}
   </React.StrictMode>
 );

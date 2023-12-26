@@ -5,14 +5,14 @@ import TrackingCard from "./tracking/TrackingCard";
 
 const Tracker = () => {
   return (
-    <div>
+    <main>
       <Navbar />
       <TrackingCard />
       <div className="mx-32 flex flex-row items-start justify-between">
         <ShipmentDetailes />
         <DeliverydAdress />
       </div>
-    </div>
+    </main>
   );
 };
 
