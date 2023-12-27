@@ -26,7 +26,7 @@ const TrackingCard = () => {
   const lastUpdateDate = trackData.CurrentStatus?.timestamp
     ? formatReadableDate(
         trackData.CurrentStatus.timestamp,
-        { year: "numeric" },
+        { dateStyle: "full" },
         lang === "ar" ? "ar-EG" : "en-US"
       )
     : "N/A";
@@ -34,7 +34,9 @@ const TrackingCard = () => {
   const promisedDate = trackData.PromisedDate
     ? formatReadableDate(
         trackData.PromisedDate,
-        { year: "numeric" },
+        {
+          dateStyle: "full",
+        },
         lang === "ar" ? "ar-EG" : "en-US"
       )
     : "N/A";
@@ -46,7 +48,7 @@ const TrackingCard = () => {
           <span>
             {translations[lang].deliveryNumber + " " + trackData.TrackingNumber}
           </span>
-          <span>{translations[lang].shipmentCanceled}</span>
+          <span>{translations[lang][trackData.CurrentStatus.state]}</span>
         </div>
 
         <div className="flex flex-col">

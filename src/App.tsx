@@ -9,12 +9,18 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="bg-slate-950 h-screen w-full flex flex-col text-white justify-center items-center">
+            <div className=" h-screen w-full flex flex-col text-red-600 justify-center items-center">
               <h1 className="text-4xl">Bosta Task</h1>
               <p className="text-xl">you can try with this ids</p>
-              <Link to="/tracker/7234258">7234258</Link>
-              <Link to="/tracker/13737343">13737343</Link>
-              <Link to="/tracker/67151313">67151313</Link>
+              <Link to="/tracker/7234258" className="underline">
+                7234258
+              </Link>
+              <Link to="/tracker/13737343" className="underline">
+                13737343
+              </Link>
+              <Link to="/tracker/67151313" className="underline">
+                67151313
+              </Link>
             </div>
           }
           index
